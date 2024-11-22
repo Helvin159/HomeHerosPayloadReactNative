@@ -20,7 +20,8 @@ type RootTabParamList = {
 };
 
 const ServiceProviderCard = ({ user }: { user: any }) => {
-  const memberSince = new Date(user.createdAt).toDateString();
+  const date = new Date(user.createdAt);
+  const memberSince = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
   const navigation = useNavigation<NavigationProp<RootTabParamList>>();
 
   const handlePress = () => {

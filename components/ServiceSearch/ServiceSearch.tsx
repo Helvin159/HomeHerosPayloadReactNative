@@ -1,4 +1,3 @@
-'use client';
 import React, { useState } from 'react';
 import { FlatList, StyleSheet, TextInput, View } from 'react-native';
 import ServiceProviderCard from '../ServiceProviderCard/ServiceProviderCard';

@@ -8,7 +8,7 @@ type Props = {};
 
 const Stack = createNativeStackNavigator();
 
-const OurHerosStack = (props: Props) => {
+const OurHeroesStack = (props: Props) => {
   return (
     <Stack.Navigator>
       <Stack.Screen name='OurHeroes' component={OurHeroesScreen} />
@@ -17,4 +17,4 @@ const OurHerosStack = (props: Props) => {
   );
 };
 
-export default OurHerosStack;
+export default OurHeroesStack;
