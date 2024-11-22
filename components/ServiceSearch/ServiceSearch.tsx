@@ -33,7 +33,6 @@ const ServiceSearch = () => {
           const data: any = await results.json();
           // Set Users
           setUsers(data);
-          console.log(users);
           // Set fetching to false
           setFetching(false);
         } catch (e) {
@@ -82,7 +81,8 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 16,
     paddingLeft: 8,
-    borderRadius: 8
+    borderRadius: 8,
+    boxShadow: '0 0 6px rgba(0,0,0,0.15)'
   }
 });
 

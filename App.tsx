@@ -14,12 +14,34 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   // console.log(Config.REACT_APP_AWS_S3_REGION);
-  const Stack = createNativeStackNavigator();
   return (
     <>
       <StatusBar style={'auto'} />
       <NavigationContainer>
-        <Tab.Navigator>
+        <Tab.Navigator
+          screenOptions={{
+            tabBarActiveTintColor: 'rgb(230,230,250)',
+            tabBarInactiveTintColor: 'rgb(150,150,160)',
+            tabBarLabelStyle: {
+              fontSize: 13,
+              fontWeight: 600,
+              paddingTop: 16
+            },
+            tabBarShowLabel: true,
+            tabBarIconStyle:{
+              opacity: 0,
+              height: 0,
+            },
+            tabBarStyle:{
+              backgroundColor: 'rgb(23,23,23)',
+              margin: 0,
+              justifyContent: 'space-between',
+              paddingRight: 16,
+              paddingLeft: 16
+            },
+
+          }}
+        >
           <Tab.Screen name='Home' component={HomeScreen} />
           <Tab.Screen name='Our Heroes' component={OurHeroesStack} />
           <Tab.Screen name='Reviews' component={Reviews} />
